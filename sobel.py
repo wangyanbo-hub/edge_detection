@@ -10,7 +10,7 @@ import numpy as np
 
 
 if __name__ == '__main__':
-    src = cv2.imread('./data/4.tif', 0)
+    src = cv2.imread('./data/simple.jpg', 0)
     cv2.imshow('src', src)
 
     kernel = np.array([[-1, -2, -1],
@@ -47,4 +47,5 @@ if __name__ == '__main__':
     # _, negative_45_deg_edge = cv2.threshold(negative_45_deg_edge, negative_45_deg_edge.max() * 0.9, 255, cv2.THRESH_BINARY)
     cv2.imshow('negative_45_deg_edge', negative_45_deg_edge)
 
-    cv2.waitKey()
+    cv2.waitKey(0)
+    cv2.destoryAllWindows()
